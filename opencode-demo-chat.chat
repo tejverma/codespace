@@ -1,12 +1,6 @@
 {
   "messages": [
     {
-      "type": "msg",
-      "id": "06899054-694b-46ac-93bf-5271a1151bbb",
-      "body": "Hi",
-      "sender": "102fe9cc10e54789b812ed29bd899525",
-      "time": 1791216025.4242353,
-      "raw_time": false,
       "metadata": {
         "model": {
           "settings": {},
@@ -14,224 +8,230 @@
         },
         "settings": {},
         "to_persona": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona"
-      }
+      },
+      "type": "msg",
+      "body": "Hi",
+      "sender": "102fe9cc10e54789b812ed29bd899525",
+      "raw_time": false,
+      "id": "06899054-694b-46ac-93bf-5271a1151bbb",
+      "time": 1791216025.4242353
     },
     {
+      "body": "Hi! How can I help you today?",
+      "raw_time": false,
       "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
       "id": "3ac5efec-2cbb-4138-8e93-a33b162ec215",
-      "raw_time": false,
-      "time": 1791216028.0789347,
       "type": "msg",
       "mentions": [],
-      "body": "Hi! How can I help you today?"
+      "time": 1791216028.0789347
     },
     {
+      "time": 1791216077.4489496,
       "sender": "102fe9cc10e54789b812ed29bd899525",
       "body": "Can you read opencode-demo.ipynb for me?",
       "type": "msg",
       "metadata": {
-        "settings": {},
+        "to_persona": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
         "model": {
-          "settings": {},
-          "id": null
+          "id": null,
+          "settings": {}
         },
-        "to_persona": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona"
+        "settings": {}
       },
-      "id": "a13a1324-eff7-4a78-bd30-49dee0bf6944",
       "raw_time": false,
-      "time": 1791216077.4489496
+      "id": "a13a1324-eff7-4a78-bd30-49dee0bf6944"
     },
     {
+      "metadata": {
+        "tool_calls": [
+          {
+            "kind": "search",
+            "tool_call_id": "call_15b7ea01d468432391347816",
+            "status": "completed",
+            "raw_input": {
+              "pattern": "**/opencode-demo.ipynb"
+            },
+            "raw_output": {
+              "metadata": {
+                "count": 1.0,
+                "truncated": false
+              },
+              "output": "/workspaces/codespace/opencode-demo.ipynb"
+            },
+            "title": "glob"
+          },
+          {
+            "raw_input": {
+              "include_outputs": "true",
+              "file_path": "opencode-demo.ipynb"
+            },
+            "kind": "other",
+            "tool_call_id": "call_ff77c5141b6c451ab9a4cee4",
+            "raw_output": {
+              "output": "```yaml\nkernelspec:\n  display_name: R 4.5.3 (xr)\n  language: R\n  name: xr\nlanguage_info:\n  codemirror_mode: ''\n  file_extension: .R\n  mimetype: text/x-R\n  name: R\n  nbconvert_exporter: ''\n  pygments_lexer: r\n  version: 4.5.3\n```\n\n### Cell 0\n\n#### Metadata\n\n```yaml\nid: eebc8267-aa49-421c-8653-04d089943830\ntype: code\n```\n\n#### Source\n\n```python\n```\n\n### Cell 1\n\n#### Metadata\n\n```yaml\nexecution_count: 2\nid: e30c4b11-2172-43b2-a532-4fbf82955d7f\ntype: code\n```\n\n#### Source\n\n```python\nlibrary(ggplot2)```\n\n### Cell 2\n\n#### Metadata\n\n```yaml\nexecution_count: 3\nid: 70de52d7-9052-4867-a540-5ce3d83e68b3\ntype: code\n```\n\n#### Source\n\n```python\nggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point() +\n  labs(x = \"City MPG\", y = \"Highway MPG\")```\n\n#### Output\n\n```\nplot without title```",
+              "metadata": {
+                "truncated": false
+              }
+            },
+            "status": "completed",
+            "title": "Jupyter_MCP_Server_read_notebook"
+          }
+        ]
+      },
       "raw_time": false,
       "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
       "body": "",
       "id": "723b4ad8-7ae9-4c8b-b0c4-771636dbcfca",
       "type": "msg",
-      "metadata": {
-        "tool_calls": [
-          {
-            "tool_call_id": "call_15b7ea01d468432391347816",
-            "kind": "search",
-            "title": "glob",
-            "status": "completed",
-            "raw_output": {
-              "output": "/workspaces/codespace/opencode-demo.ipynb",
-              "metadata": {
-                "truncated": false,
-                "count": 1.0
-              }
-            },
-            "raw_input": {
-              "pattern": "**/opencode-demo.ipynb"
-            }
-          },
-          {
-            "raw_input": {
-              "file_path": "opencode-demo.ipynb",
-              "include_outputs": "true"
-            },
-            "kind": "other",
-            "tool_call_id": "call_ff77c5141b6c451ab9a4cee4",
-            "title": "Jupyter_MCP_Server_read_notebook",
-            "status": "completed",
-            "raw_output": {
-              "metadata": {
-                "truncated": false
-              },
-              "output": "```yaml\nkernelspec:\n  display_name: R 4.5.3 (xr)\n  language: R\n  name: xr\nlanguage_info:\n  codemirror_mode: ''\n  file_extension: .R\n  mimetype: text/x-R\n  name: R\n  nbconvert_exporter: ''\n  pygments_lexer: r\n  version: 4.5.3\n```\n\n### Cell 0\n\n#### Metadata\n\n```yaml\nid: eebc8267-aa49-421c-8653-04d089943830\ntype: code\n```\n\n#### Source\n\n```python\n```\n\n### Cell 1\n\n#### Metadata\n\n```yaml\nexecution_count: 2\nid: e30c4b11-2172-43b2-a532-4fbf82955d7f\ntype: code\n```\n\n#### Source\n\n```python\nlibrary(ggplot2)```\n\n### Cell 2\n\n#### Metadata\n\n```yaml\nexecution_count: 3\nid: 70de52d7-9052-4867-a540-5ce3d83e68b3\ntype: code\n```\n\n#### Source\n\n```python\nggplot(mpg, aes(x = cty, y = hwy)) +\n  geom_point() +\n  labs(x = \"City MPG\", y = \"Highway MPG\")```\n\n#### Output\n\n```\nplot without title```"
-            }
-          }
-        ]
-      },
-      "mentions": [],
-      "time": 1791216079.0878892
+      "time": 1791216079.0878892,
+      "mentions": []
     },
     {
-      "body": "The notebook `opencode-demo.ipynb` has an R kernel and 3 cells:\n\n1. **Cell 0** \u2014 empty code cell\n2. **Cell 1** \u2014 `library(ggplot2)`\n3. **Cell 2** \u2014 a ggplot scatter plot of `mpg` (`cty` vs `hwy`) that outputs a plot titled \"plot without title\"",
-      "mentions": [],
       "id": "f2b00aea-e679-4909-baea-36b17c1fa43d",
+      "mentions": [],
       "type": "msg",
-      "time": 1791216083.3107781,
       "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
-      "raw_time": false
+      "raw_time": false,
+      "body": "The notebook `opencode-demo.ipynb` has an R kernel and 3 cells:\n\n1. **Cell 0** \u2014 empty code cell\n2. **Cell 1** \u2014 `library(ggplot2)`\n3. **Cell 2** \u2014 a ggplot scatter plot of `mpg` (`cty` vs `hwy`) that outputs a plot titled \"plot without title\"",
+      "time": 1791216083.3107781
     },
     {
       "id": "2e1d2cc0-dd5b-45dd-878b-80753cc3d345",
+      "raw_time": false,
+      "body": "Delete the empty cell",
+      "type": "msg",
       "sender": "102fe9cc10e54789b812ed29bd899525",
       "metadata": {
-        "settings": {},
         "to_persona": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
         "model": {
           "id": null,
           "settings": {}
-        }
+        },
+        "settings": {}
       },
-      "raw_time": false,
-      "body": "Delete the empty cell",
-      "type": "msg",
       "time": 1791216100.820544
     },
     {
+      "time": 1791216102.4600294,
       "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
-      "type": "msg",
+      "id": "5272ff58-f6dc-4a79-be20-2e0e5cf7bb22",
+      "mentions": [],
+      "body": "",
       "metadata": {
         "tool_calls": [
           {
-            "tool_call_id": "call_15d61fbce0f840c4bb236dbe",
-            "kind": "other",
-            "title": "Jupyter_MCP_Server_delete_cell",
+            "status": "completed",
             "raw_output": {
               "output": "{\"success\":true}",
               "metadata": {
                 "truncated": false
               }
             },
+            "tool_call_id": "call_15d61fbce0f840c4bb236dbe",
+            "kind": "other",
+            "title": "Jupyter_MCP_Server_delete_cell",
             "raw_input": {
               "file_path": "opencode-demo.ipynb",
               "cell_id": "eebc8267-aa49-421c-8653-04d089943830"
-            },
-            "status": "completed"
+            }
           }
         ]
       },
-      "body": "",
-      "time": 1791216102.4600294,
-      "raw_time": false,
-      "id": "5272ff58-f6dc-4a79-be20-2e0e5cf7bb22",
-      "mentions": []
-    },
-    {
-      "type": "msg",
-      "mentions": [],
-      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
-      "body": "Deleted.",
-      "id": "daa910ec-8100-494d-b41f-4b2580462b8b",
-      "raw_time": false,
-      "time": 1791216104.1642506
-    },
-    {
-      "body": "The notebook `opencode-demo.ipynb` has an R kernel and 3 cells:\n\n1. **Cell 0** \u2014 empty code cell\n2. **Cell 1** \u2014 `library(ggplot2)`\n3. **Cell 2** \u2014 a ggplot scatter plot of `mpg` (`cty` vs `hwy`) that outputs a plot titled \"plot without title\"",
-      "id": "16468070-2cb5-42d4-86c9-3b565fa38dc6",
-      "time": 1795063473.1437461,
-      "mentions": [],
-      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
       "raw_time": false,
       "type": "msg"
     },
     {
+      "id": "daa910ec-8100-494d-b41f-4b2580462b8b",
+      "raw_time": false,
+      "time": 1791216104.1642506,
+      "type": "msg",
+      "mentions": [],
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
+      "body": "Deleted."
+    },
+    {
+      "body": "The notebook `opencode-demo.ipynb` has an R kernel and 3 cells:\n\n1. **Cell 0** \u2014 empty code cell\n2. **Cell 1** \u2014 `library(ggplot2)`\n3. **Cell 2** \u2014 a ggplot scatter plot of `mpg` (`cty` vs `hwy`) that outputs a plot titled \"plot without title\"",
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
+      "id": "16468070-2cb5-42d4-86c9-3b565fa38dc6",
       "raw_time": false,
       "mentions": [],
+      "time": 1795063473.1437461,
+      "type": "msg"
+    },
+    {
+      "mentions": [],
       "time": 1795063473.1517956,
+      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
+      "id": "b7bda354-d6e7-41ff-bc46-4cdb493e5c95",
+      "body": "",
       "metadata": {
         "tool_calls": [
           {
+            "kind": "other",
             "raw_input": {
-              "cell_id": "eebc8267-aa49-421c-8653-04d089943830",
-              "file_path": "opencode-demo.ipynb"
+              "file_path": "opencode-demo.ipynb",
+              "cell_id": "eebc8267-aa49-421c-8653-04d089943830"
             },
             "tool_call_id": "call_15d61fbce0f840c4bb236dbe",
+            "title": "Jupyter_MCP_Server_delete_cell",
             "status": "completed",
             "raw_output": {
               "metadata": {
                 "truncated": false
               },
               "output": "{\"success\":true}"
-            },
-            "title": "Jupyter_MCP_Server_delete_cell",
-            "kind": "other"
+            }
           }
         ]
       },
-      "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
-      "id": "b7bda354-d6e7-41ff-bc46-4cdb493e5c95",
-      "type": "msg",
-      "body": ""
+      "raw_time": false,
+      "type": "msg"
     },
     {
+      "time": 1795063473.1566856,
+      "mentions": [],
+      "body": "Deleted.",
       "sender": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona",
       "id": "32e0d24b-5415-45ad-8ae4-916a0b3ff9fb",
-      "body": "Deleted.",
       "type": "msg",
-      "raw_time": false,
-      "mentions": [],
-      "time": 1795063473.1566856
+      "raw_time": false
     }
   ],
   "users": {
+    "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona": {
+      "name": "OpenCode",
+      "initials": null,
+      "avatar_url": "/api/ai/avatars/jupyter-ai-personas%3A%3Ajupyter_ai_acp_client%3A%3AOpenCodeAcpPersona",
+      "display_name": "OpenCode",
+      "color": null,
+      "bot": true,
+      "username": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona"
+    },
+    "hidden::jupyter_ai_system": {
+      "initials": null,
+      "username": "hidden::jupyter_ai_system",
+      "display_name": "System",
+      "avatar_url": null,
+      "color": null,
+      "name": "System",
+      "bot": true
+    },
     "102fe9cc10e54789b812ed29bd899525": {
       "name": "Anonymous Io",
       "avatar_url": null,
-      "color": "var(--jp-collaborator-color3)",
-      "mention_name": "Anonymous-Io",
-      "bot": false,
+      "username": "102fe9cc10e54789b812ed29bd899525",
       "initials": "AI",
+      "mention_name": "Anonymous-Io",
+      "color": "var(--jp-collaborator-color3)",
       "display_name": "Anonymous Io",
-      "username": "102fe9cc10e54789b812ed29bd899525"
-    },
-    "hidden::jupyter_ai_system": {
-      "name": "System",
-      "initials": null,
-      "avatar_url": null,
-      "bot": true,
-      "color": null,
-      "username": "hidden::jupyter_ai_system",
-      "display_name": "System"
-    },
-    "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona": {
-      "initials": null,
-      "display_name": "OpenCode",
-      "bot": true,
-      "name": "OpenCode",
-      "avatar_url": "/api/ai/avatars/jupyter-ai-personas%3A%3Ajupyter_ai_acp_client%3A%3AOpenCodeAcpPersona",
-      "color": null,
-      "username": "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona"
+      "bot": false
     }
   },
   "attachments": {},
   "metadata": {
-    "id": "19243e93-8422-41b1-bf2b-2a095f0eee89",
     "acp_session_ids": {
       "jupyter-ai-personas::jupyter_ai_acp_client::OpenCodeAcpPersona": "ses_ef334b7acffe347RLpdgEda6mZ"
-    }
+    },
+    "id": "19243e93-8422-41b1-bf2b-2a095f0eee89"
   }
 }
